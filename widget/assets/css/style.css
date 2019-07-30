@@ -341,6 +341,7 @@
     z-index: 11;
 }
 
+
 .holder.bottom-post hr {
     margin: 0;
 }
@@ -459,6 +460,7 @@
 .play-btn {
     position: relative;
 }
+
 
 .play-btn:after {
     content: "\e612";
@@ -801,4 +803,33 @@ textarea {
     margin-left: 10px;
     font-size: 17px;
     vertical-align: 3px;
+}
+
+.thread-container {
+    height: calc(100% - 47px);
+    padding-top: 15px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+html[safe-area="true"] .holder.bottom-post:not(.full-post-section)  {
+    height: calc(43px + env(safe-area-inset-bottom)) !important;
+    height: calc(43px + constant(safe-area-inset-bottom)) !important;
+}
+html[safe-area="true"] .has-comment-box {
+    height: 100% !important;
+    padding-bottom: calc(39px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(39px + constant(safe-area-inset-bottom)) !important;
+}
+
+html[safe-area="true"] .full-post-section .full-post-box .media-section {
+    padding-bottom: env(safe-area-inset-bottom) !important;
+    padding-bottom: constant(safe-area-inset-bottom) !important;
+}
+
+html[safe-area="true"] .social-plugin .social-thread {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
 }
